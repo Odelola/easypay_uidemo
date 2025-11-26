@@ -1,9 +1,9 @@
-# TRAVENOR - TRAVEL APP
+# EASYPAY UI - UI DEMO OF NICKELFOX DESIGN
 
 App is currently in development,
 #### Repository
 
-[Project's Repository](https://github.com/Odelola/travenor_RN)
+[Project's Repository](https://github.com/Odelola/easypay_uidemo)
 
 ## HOW TO RUN
 
