@@ -1,0 +1,8 @@
+export { default as HomeIcon } from "./HomeIcon.svg"
+export { default as HomeIconActive } from "./HomeIconActive.svg"
+export { default as SearchIcon } from "./SearchIcon.svg"
+export { default as SearchIconActive } from "./SearchIconActive.svg"
+export { default as LibraryIcon } from "./LibraryIcon.svg"
+export { default as LibraryIconActive } from "./LibraryIconActive.svg"
+export { default as MenuIcon } from "./MenuIcon.svg"
+export { default as MenuIconActive } from "./MenuIconActive.svg"
