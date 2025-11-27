@@ -4,6 +4,16 @@
         primary: {
           DEFAULT: '#F9EFE5',
         },
+        light: {
+          DEFAULT: '#F8F8F8'
+        },
+        gray: {
+          DEFAULT: "#595F67",
+          300: "#AAAFB5"
+        },
+        dark: {
+          DEFAULT: "#0B0A0A"
+        }
 }
 
 module.exports = {

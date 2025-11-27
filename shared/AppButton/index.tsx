@@ -10,7 +10,7 @@ interface AppButtonProps extends PressableProps {
 function AppButton({ buttonText, children, className, secondary = false, ...props }: AppButtonProps) {
     return (
         <Pressable className={`${!secondary ? "bg-black" : "bg-white border-2 border-black" } w-full items-center rounded-md py-4`}  {...props}>
-            <AppText className={`${!secondary ? "text-white" : "text-black" }`}>{buttonText}</AppText>
+            <AppText className={`${!secondary ? "text-white" : "text-black" }`} fontFamily={APP_FONTS['ROBOTO-SEMIBOLD']}>{buttonText}</AppText>
         </Pressable>
 
     )

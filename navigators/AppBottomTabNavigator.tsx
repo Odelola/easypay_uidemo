@@ -1,33 +1,48 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home } from '../screens';
-import { HomeIcon, SearchIcon, LibraryIcon, MenuIcon, HomeIconActive, SearchIconActive, LibraryIconActive, MenuIconActive } from '../components/Icons/bottomTabIcons';
+import { Home, Invoice, Notification, Profile, QRCode } from '@/screens';
+import { HomeIcon, HomeIconActive, InvoiceIcon, InvoiceIconActive, NotificationIcon, NotificationIconActive, ProfileIcon, ProfileIconActive, QrCodeIcon } from '@/assets/svgs';
 import { ParamListBase, RouteProp } from '@react-navigation/native';
 import { Platform } from 'react-native';
+import { APP_SCREEN_NAMES } from '@/constants';
+import { AppBox } from '@/shared';
+import { getFontSize } from '@/utils/functions';
 
 
 const AppBottomTab = createBottomTabNavigator();
 
+function createEllipsesForActiveIcon(icon: React.ReactElement ) {
+    return (
+        <AppBox style={{ alignItems: "center", rowGap: 2 }}>
+            {icon}
+            <AppBox style={{ width: 4, height: 4, borderRadius: 2, backgroundColor: "black" }} />
+        </AppBox>
+    )
+}
+
 export default function AppBottomTabNavigator() {
-       const getRouteIcon = (focused: boolean, route: RouteProp<ParamListBase, string>) => {
+    const { getTextFontSize } = getFontSize;
+
+    const getRouteIcon = (focused: boolean, route: RouteProp<ParamListBase, string>) => {
         switch (route.name) {
-            case "Home":
-                return focused ? <HomeIconActive /> : <HomeIcon />
-            case "Search":
-                return focused ? <SearchIconActive /> : <SearchIcon />
-            case "Library":
-                return focused ? <LibraryIconActive /> : <LibraryIcon />
-            case "Menu":
-                return focused ? <MenuIconActive /> : <MenuIcon />
+            case APP_SCREEN_NAMES.HOME:
+                return focused ? createEllipsesForActiveIcon(<HomeIconActive width={getTextFontSize(21)} height={getTextFontSize(21)} />) : <HomeIcon />
+            case APP_SCREEN_NAMES.INVOICE:
+                return focused ? createEllipsesForActiveIcon(<InvoiceIconActive width={getTextFontSize(21)} height={getTextFontSize(21)} />) : <InvoiceIcon width={"100%"} />
+            case APP_SCREEN_NAMES['QR-CODE']:
+                return <QrCodeIcon width={getTextFontSize(42)} height={getTextFontSize(42)} />
+            case APP_SCREEN_NAMES.NOTIFICATION:
+                return focused ? createEllipsesForActiveIcon(<NotificationIconActive width={getTextFontSize(21)} height={getTextFontSize(21)} />) : <NotificationIcon />
+            case APP_SCREEN_NAMES.PROFILE:
+                return focused ? createEllipsesForActiveIcon(<ProfileIconActive width={getTextFontSize(21)} height={getTextFontSize(21)} />) : <ProfileIcon />
             default:
                 break;
         }
     }
 
     const defaultTabStyle = {
-        // backgroundColor: tabBarBackground,
         paddingTop: 0,
         borderTopWidth: 0,
-        height: 80
+        height: 80,
     }
     const tabStyleForIos = {
         position: "absolute",
@@ -46,20 +61,23 @@ export default function AppBottomTabNavigator() {
         <AppBottomTab.Navigator
             screenOptions={({ route }) => ({
                 tabBarIcon: ({ focused }) => getRouteIcon(focused, route),
-                tabBarIconStyle: {marginTop: 10, marginBottom: 10},
+                tabBarIconStyle: { marginTop: 10, marginBottom: 10 },
                 headerShown: false,
                 tabBarStyle: [defaultTabStyle, Platform.OS === "ios" && tabStyleForIos],
+                tabBarShowLabel: false,
                 // tabBarLabelStyle: { color: whiteTextColor },
-                tabBarItemStyle: {paddingBottom: 0},
+                tabBarItemStyle: { paddingBottom: 0 },
                 // tabBarActiveBackgroundColor: pureBlack
             })}
         >
-            <AppBottomTab.Screen name="Home" component={Home}
+            <AppBottomTab.Screen name={APP_SCREEN_NAMES.HOME} component={Home}
                 options={{
-                    tabBarLabel: "Home",
-                    title: "Home",
                 }}
             />
+            <AppBottomTab.Screen name={APP_SCREEN_NAMES.INVOICE} component={Invoice} />
+            <AppBottomTab.Screen name={APP_SCREEN_NAMES['QR-CODE']} component={QRCode} />
+            <AppBottomTab.Screen name={APP_SCREEN_NAMES.NOTIFICATION} component={Notification} />
+            <AppBottomTab.Screen name={APP_SCREEN_NAMES.PROFILE} component={Profile} />
         </AppBottomTab.Navigator>
     )
 }

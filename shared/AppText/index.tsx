@@ -12,10 +12,12 @@ const AppText = ({ children, className, fontSize = 16, fontFamily = APP_FONTS['R
     const { getTextFontSize } = getFontSize;
 
     return (
-        <Text className={className} style={[{
+        <Text 
+        className={"text-gray " + className}
+        style={[{
             fontFamily,
             fontSize: getTextFontSize(fontSize),
-        }, style]}>{children} </Text>
+        }, style]} >{children} </Text>
     )
 }
 

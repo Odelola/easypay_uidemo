@@ -1,4 +1,28 @@
 
+export { default as CircledPlusIcon } from "./Icons/CircledPlusIcon.svg"
+export { default as WithdrawIcon } from "./Icons/WithdrawIcon.svg"
+export { default as SendIcon } from "./Icons/SendIcon.svg"
+export { default as InternetIcon } from "./Icons/InternetIcon.svg"
+export { default as WaterIcon } from "./Icons/WaterIcon.svg"
+export { default as TVIcon } from "./Icons/TVIcon.svg"
+export { default as LightningIcon } from "./Icons/LightningIcon.svg"
+export { default as VehicleIcon } from "./Icons/VehicleIcon.svg"
+export { default as HouseIcon } from "./Icons/HouseIcon.svg"
+export { default as InvestmentIcon } from "./Icons/InvestmentIcon.svg"
+export { default as MoreIcon } from "./Icons/MoreIcon.svg"
+
+export { default as HomeIcon } from "./Icons/bottomTabIcons/HomeIcon.svg"
+export { default as HomeIconActive } from "./Icons/bottomTabIcons/HomeIconActive.svg"
+export { default as InvoiceIcon } from "./Icons/bottomTabIcons/InvoiceIcon.svg"
+export { default as InvoiceIconActive } from "./Icons/bottomTabIcons/InvoiceIconActive.svg"
+export { default as QrCodeIcon } from "./Icons/bottomTabIcons/QrCodeIcon.svg"
+export { default as NotificationIcon } from "./Icons/bottomTabIcons/NotificationIcon.svg"
+export { default as NotificationIconActive } from "./Icons/bottomTabIcons/NotificationIconActive.svg"
+export { default as ProfileIcon } from "./Icons/bottomTabIcons/ProfileIcon.svg"
+export { default as ProfileIconActive } from "./Icons/bottomTabIcons/ProfileIconActive.svg"
+
 export { default as BrandLogo } from "./Logos/BrandLogo.svg"
 
 export { default as OnboardImage1 } from "./Images/OnboardImage1.svg"
+export { default as SpecialDeal_GirlShoppingImage } from "./Images/SpecialDeal_GirlShoppingImage.svg"
+export { default as SunHatImage } from "./Images/SunHatImage.svg"

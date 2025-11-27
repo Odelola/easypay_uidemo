@@ -2,8 +2,8 @@ import { useFonts } from 'expo-font';
 import { APP_FONTS } from './theme';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { AppBottomTabNavigator, AuthScreenNavigator } from './navigators';
-import Onboarding from 'screens/Onboarding';
+import { AppBottomTabNavigator } from './navigators';
+import { Onboarding } from 'screens';
 import { APP_SCREEN_NAMES } from './constants';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 

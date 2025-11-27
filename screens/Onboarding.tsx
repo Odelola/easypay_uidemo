@@ -16,6 +16,7 @@ function Onboarding({ navigation }: { navigation: NavigationProp<any, any> }) {
     const scrollX = React.useRef(new Animated.Value(0)).current;
 
     const _navigateToHomeScreen = () => {
+        navigation.navigate(APP_SCREEN_NAMES['APP-BOTTOM-TAB-NAVIGATOR'])
     }
 
     const ScrollIndicators = () => {
@@ -44,7 +45,7 @@ function Onboarding({ navigation }: { navigation: NavigationProp<any, any> }) {
 
     function OnboardingHeading({ children }: AppTextProps) {
         return (
-            <AppText fontSize={30} fontFamily={APP_FONTS['IBM-PLEX-SANS-SEMIBOLD']} className='text-dark'>
+            <AppText fontSize={30} fontFamily={APP_FONTS['IBM-PLEX-SANS-SEMIBOLD']} className='text-black'>
                 {children}
             </AppText>
         )
