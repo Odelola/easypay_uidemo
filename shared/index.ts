@@ -1,3 +1,4 @@
+export  {default as AppBackNavigator } from "./AppBackNavigator"
 export  {default as AppScreen } from "./AppScreen"
 export  {default as AppText } from "./AppText"
 export {default as AppBox } from "./AppBox"

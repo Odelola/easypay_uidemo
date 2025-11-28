@@ -10,6 +10,8 @@ export { default as VehicleIcon } from "./Icons/VehicleIcon.svg"
 export { default as HouseIcon } from "./Icons/HouseIcon.svg"
 export { default as InvestmentIcon } from "./Icons/InvestmentIcon.svg"
 export { default as MoreIcon } from "./Icons/MoreIcon.svg"
+export { default as ChevronLeftIcon } from "./Icons/ChevronLeftIcon.svg"
+export { default as SearchIcon } from "./Icons/SearchIcon.svg"
 
 export { default as HomeIcon } from "./Icons/bottomTabIcons/HomeIcon.svg"
 export { default as HomeIconActive } from "./Icons/bottomTabIcons/HomeIconActive.svg"
@@ -24,5 +26,9 @@ export { default as ProfileIconActive } from "./Icons/bottomTabIcons/ProfileIcon
 export { default as BrandLogo } from "./Logos/BrandLogo.svg"
 
 export { default as OnboardImage1 } from "./Images/OnboardImage1.svg"
+export { default as OnboardImage2 } from "./Images/OnboardImage2.svg"
+export { default as OnboardImage3 } from "./Images/OnboardImage3.svg"
 export { default as SpecialDeal_GirlShoppingImage } from "./Images/SpecialDeal_GirlShoppingImage.svg"
 export { default as SunHatImage } from "./Images/SunHatImage.svg"
+export { default as RecipientImage } from "./Images/RecipientImage.svg"
+export { default as ReceiptSucessImage } from "./Images/ReceiptSucessImage.svg"

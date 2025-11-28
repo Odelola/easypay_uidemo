@@ -1,11 +1,12 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, Invoice, Notification, Profile, QRCode } from '@/screens';
+import { Invoice, Notification, Profile, QRCode } from '@/screens';
 import { HomeIcon, HomeIconActive, InvoiceIcon, InvoiceIconActive, NotificationIcon, NotificationIconActive, ProfileIcon, ProfileIconActive, QrCodeIcon } from '@/assets/svgs';
 import { ParamListBase, RouteProp } from '@react-navigation/native';
 import { Platform } from 'react-native';
 import { APP_SCREEN_NAMES } from '@/constants';
 import { AppBox } from '@/shared';
 import { getFontSize } from '@/utils/functions';
+import HomeNavigator from './HomeNavigator';
 
 
 const AppBottomTab = createBottomTabNavigator();
@@ -24,7 +25,7 @@ export default function AppBottomTabNavigator() {
 
     const getRouteIcon = (focused: boolean, route: RouteProp<ParamListBase, string>) => {
         switch (route.name) {
-            case APP_SCREEN_NAMES.HOME:
+            case APP_SCREEN_NAMES['HOME-NAVIGATOR']:
                 return focused ? createEllipsesForActiveIcon(<HomeIconActive width={getTextFontSize(21)} height={getTextFontSize(21)} />) : <HomeIcon />
             case APP_SCREEN_NAMES.INVOICE:
                 return focused ? createEllipsesForActiveIcon(<InvoiceIconActive width={getTextFontSize(21)} height={getTextFontSize(21)} />) : <InvoiceIcon width={"100%"} />
@@ -70,7 +71,7 @@ export default function AppBottomTabNavigator() {
                 // tabBarActiveBackgroundColor: pureBlack
             })}
         >
-            <AppBottomTab.Screen name={APP_SCREEN_NAMES.HOME} component={Home}
+            <AppBottomTab.Screen name={APP_SCREEN_NAMES['HOME-NAVIGATOR']} component={HomeNavigator}
                 options={{
                 }}
             />

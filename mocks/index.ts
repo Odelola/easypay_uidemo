@@ -1,12 +1,14 @@
-import { CircledPlusIcon, HouseIcon, InternetIcon, InvestmentIcon, LightningIcon, MoreIcon, SendIcon, TVIcon, VehicleIcon, WaterIcon, WithdrawIcon } from "@/assets/svgs";
+import { CircledPlusIcon, HouseIcon, InternetIcon, InvestmentIcon, LightningIcon, MoreIcon, OnboardImage1, OnboardImage2, OnboardImage3, SendIcon, TVIcon, VehicleIcon, WaterIcon, WithdrawIcon } from "@/assets/svgs";
 
 export interface ONBOARDING_DATA_TYPE {
+    image: React.FC
     heading: string[];
-    paragraph: string[]
+    paragraph: string[];
 }
 
 export const ONBOARDING_DATA: ONBOARDING_DATA_TYPE[] = [
     {
+        image: OnboardImage1,
         heading: [
             "Easy Online Payment",
         ],
@@ -16,21 +18,23 @@ export const ONBOARDING_DATA: ONBOARDING_DATA_TYPE[] = [
         ]
     },
     {
+        image: OnboardImage2,
         heading: [
-            "Easy Online Payment",
+            "Pay for things you love",
         ],
         paragraph: [
-            "Make your payment experience more better",
-            " today. No additional admin fee",
+            "Seamless payments for your passion",
+            " has never been better.",
         ]
     },
     {
+        image: OnboardImage3,
         heading: [
-            "Easy Online Payment",
+            "Hassle Free",
         ],
         paragraph: [
-            "Make your payment experience more better",
-            " today. No additional admin fee",
+            "Problems associated with daily payments",
+            " no longer exists",
         ]
     },
 ];

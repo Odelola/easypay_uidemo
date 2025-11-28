@@ -9,7 +9,9 @@
         },
         gray: {
           DEFAULT: "#595F67",
-          300: "#AAAFB5"
+          300: "#AAAFB5",
+          400: "#D0D3D8",
+          500: "#8F92A1",
         },
         dark: {
           DEFAULT: "#0B0A0A"

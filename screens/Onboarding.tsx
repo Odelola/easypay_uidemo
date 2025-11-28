@@ -21,13 +21,13 @@ function Onboarding({ navigation }: { navigation: NavigationProp<any, any> }) {
 
     const ScrollIndicators = () => {
         return (
-            <AppBox className='flex-row gap-x-2 my-4' >
+            <AppBox className='flex-row gap-x-2 my-4'>
                 {ONBOARDING_DATA.map((_, index) => {
                     const inputRange = [(index - 1) * width, index * width, (index + 1) * width];
                     const inputRange2 = [(index) * (width), (index) * width * 2, (index + 1) * width * 4];
                     const colorChange = scrollX.interpolate({
                         inputRange,
-                        outputRange: ["#CAEAFF", "#0D6EFD", "#CAEAFF"],
+                        outputRange: ["transparent", "#000000", "transparent",],
                         extrapolate: 'clamp'
                     });
                     const widthChange = scrollX.interpolate({
@@ -36,16 +36,17 @@ function Onboarding({ navigation }: { navigation: NavigationProp<any, any> }) {
                         extrapolate: 'clamp'
                     })
                     return (
-                        <Animated.View className="!w-2 h-2 rounded-lg" style={[{ backgroundColor: colorChange, width: widthChange }]} key={index}></Animated.View>
+                        <Animated.View className="!w-4 h-4 border-2 rounded-sm bg-gray-400" style={[{ borderColor: colorChange }]} key={index}></Animated.View>
                     )
                 })}
             </AppBox>
         )
     }
 
+
     function OnboardingHeading({ children }: AppTextProps) {
         return (
-            <AppText fontSize={30} fontFamily={APP_FONTS['IBM-PLEX-SANS-SEMIBOLD']} className='text-black'>
+            <AppText fontSize={30} fontFamily={APP_FONTS['IBM-PLEX-SANS-SEMIBOLD']} className='text-dark'>
                 {children}
             </AppText>
         )
@@ -81,7 +82,7 @@ function Onboarding({ navigation }: { navigation: NavigationProp<any, any> }) {
                 overScrollMode='never'
             />
             <AppBox className='items-center mt-4'>
-                {/* <ScrollIndicators /> */}
+                <ScrollIndicators />
             </AppBox>
             <AppBox style={{ paddingHorizontal: width * .05 }} className='gap-y-2'>
                 <AppButton buttonText={"Login"} onPress={() => _navigateToHomeScreen()} />
@@ -98,7 +99,7 @@ function Onboarding({ navigation }: { navigation: NavigationProp<any, any> }) {
                         <BrandLogo />
                     </AppBox>
                     <AppBox className='items-center'>
-                        <OnboardImage1 width={"100%"} />
+                        <item.image width={"100%"} />
                     </AppBox>
                 </AppBox>
                 <AppBox className='items-center mt-8'>
