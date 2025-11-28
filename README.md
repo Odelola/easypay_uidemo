@@ -1,6 +1,10 @@
-# EASYPAY UI - UI DEMO OF NICKELFOX DESIGN
+# EasyPay – React Native Payment App (UI Demo)
 
-App is currently in development,
+A functional UI demo of a digital wallet app, built from Figma inspiration by Nickelfox.
+No backend. No API. Just clean, responsive frontend execution.
+
+✨ A ⭐ star for the repo would mean a lot!
+
 #### Repository
 
 [Project's Repository](https://github.com/Odelola/easypay_uidemo)
@@ -28,7 +32,8 @@ npm i --save-dev
 npx expo start
 ```
 
-
+#### Screenshots
+<img width="951" height="620" alt="Design Screenshot" src="https://github.com/user-attachments/assets/fbf1728d-4bc7-45e7-a96e-a35827e757b4" />
 
 ### Technologies
 
@@ -36,12 +41,12 @@ npx expo start
 - Typescript
 - Nativewind
 - React Native Navigation and Bottom Tab Navigation
+- React Context API
 
-### Project Demo Videos
- Coming soon
 
 ## Authors:
 
 - [github@Odelola](https://github.com/odelola)
+- [NickelFox](https://nickelfox.com)
 
 
