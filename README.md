@@ -34,7 +34,7 @@ npx expo start
 
 #### Screenshots And Video Demo
 <img width="951" height="620" alt="Design Screenshot" src="https://github.com/user-attachments/assets/fbf1728d-4bc7-45e7-a96e-a35827e757b4" />
-https://github.com/user-attachments/assets/64d5512d-ebaf-403a-9991-d8c4cbbd7ad5
+<video src="https://github.com/user-attachments/assets/64d5512d-ebaf-403a-9991-d8c4cbbd7ad5" alt="Design Demo"></video>
 
 ### Technologies
 
